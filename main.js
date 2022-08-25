@@ -11,9 +11,9 @@ const clickHandler = (e) => {
     console.log(e.currentTarget.id)
 }
 
-const clickHandler2 = (e) => {
-    console.log(e)
-}
+// const clickHandler2 = (e) => {
+//     console.log(e)
+// }
 
 sm.onclick = clickHandler
 // sm.onclick = null
@@ -22,11 +22,11 @@ sm.onclick = clickHandler
 // sm.addEventListener('click', clickHandler2)
 // sm.removeEventListener('click', clickHandler)
 
-const getCurrntTargrtID = (e) => {
-    // console.log([...e.path])
-    e.stopPropagation()
-    alert(e.currentTarget.id)
-}
+// const getCurrntTargrtID = (e) => {
+//     // console.log([...e.path])
+//     e.stopPropagation()
+//     alert(e.currentTarget.id)
+// }
 
 md.addEventListener('click', getCurrntTargrtID)
 bg.addEventListener('click', ()=>alert('big'))
@@ -36,3 +36,7 @@ a.addEventListener('click', (e) => {
     e.stopPropagation()
     alert('Всем привет')
 })
+
+
+
+
