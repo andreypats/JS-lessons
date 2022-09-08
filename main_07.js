@@ -44,16 +44,17 @@
 
 //5. Реализуйте функцию, которая принимает параметром сторку (предложение) и возвращает то же предложение, где все слова написаны строчными, но начинаются с заглавных букв.
 // setUpperCase("всем стУдентам инкуБатора Желаю удачИ!") => "Всем Студентам Инкубатора Желаю Удачи!"
-const setUpperCase = (str) => {
-    let arr = str.toLowerCase().split(' ');
-    for (let i = 0; i < arr.length; i++) {
-        arr[i][0] = arr[i][0].toUpperCase();
-        console.log(arr[i][0])
-    }
-    return arr
-}
-
-console.log(setUpperCase("всем стУдентам инкуБатора Желаю удачИ!"))
+// const setUpperCase = (str) => {
+//     let arr = str.toLowerCase().split(' ');
+//     for (let i = 0; i < arr.length; i++) {
+//         let first = arr[i][0].toUpperCase();
+//         let end = arr[i].slice(1)
+//         arr[i] = first + end
+//     }
+//     return arr.join(' ')
+// }
+//
+// console.log(setUpperCase("всем стУдентам инкуБатора Желаю удачИ!"))
 
 // !!!!!!!!!!!!!!!!!!После решения 5 задач - поднимаем руку!!!!!!!!
 
@@ -69,6 +70,23 @@ console.log(setUpperCase("всем стУдентам инкуБатора Же�
 // isIncludes("Incubator", "inba") => true
 // isIncludes("Incubator", "Incubatorrr")=> true
 
+const isIncludes = (str, word) => {
+    let compare = false;
+    for (let i = 0; i < word.length; i++) {
+        let temp = false;
+        for (let j = 0; j < str.length; j++) {
+            if (word[i].toLowerCase() === str[j].toLowerCase()) {
+                temp = true;
+                break;
+            }
+        }
+        temp ? compare = true : compare = false;
+        if (!compare) break;
+    }
+    return compare;
+}
+
+console.log(isIncludes("Incubator", "Cut"))
 
 
 
